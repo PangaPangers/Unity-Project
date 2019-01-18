@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7332641411891946539}
   - component: {fileID: 7332641411891946549}
   - component: {fileID: 7332641411891946548}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlayerModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 7332641411982624294}
   - component: {fileID: 7332641411982624293}
   - component: {fileID: 7332641411982624292}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7332641412146307842}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7332641412346090491}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 7332641412830097558}
   - component: {fileID: 7332641412830097552}
   - component: {fileID: 7332641412830097559}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,9 +332,9 @@ GameObject:
   - component: {fileID: 7961610634317869184}
   - component: {fileID: 3925908931093566405}
   - component: {fileID: 4245861462093957455}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -398,6 +398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Freecam: {fileID: 7332641412830097552}
+  camLock: 90
 --- !u!114 &7332641412911746545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -423,11 +424,19 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7332641412911746550}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a32fe356ca3136a47bcb50861ed68aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weapon:
+    name: PANGERPEW
+    damage: 100000
+    range: 100000
+  cam: {fileID: 7332641412830097552}
+  mask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!114 &2430017042308909488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -478,6 +487,8 @@ MonoBehaviour:
   - {fileID: 7332641412911746545}
   - {fileID: 7332641412830097552}
   - {fileID: 7332641412830097559}
+  - {fileID: 7332641412911746556}
+  remoteLayerName: RemotePlayer
 --- !u!114 &7961610634317869184
 MonoBehaviour:
   m_ObjectHideFlags: 0

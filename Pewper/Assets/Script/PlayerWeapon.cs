@@ -1,18 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PlayerWeapon : MonoBehaviour
+[System.Serializable]
+public class PlayerWeapon
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string name = "PANGERPEW";
+
+    public float damage = 100000f;
+    public float range = 100000f;
+
+
 }
